@@ -68,7 +68,7 @@ function SearchPage() {
             <p> Search Title: {searchActivity.searchActivity.searchTitle} </p>{" "}
             <p>
               {" "}
-              Publish Date :{" "}
+              Publish Date:{" "}
               {searchActivity.searchActivity.searchResult.publish_date}{" "}
             </p>{" "}
             <h3> Search Result: </h3>{" "}
@@ -77,6 +77,8 @@ function SearchPage() {
               Summary Text:{" "}
               {searchActivity.searchActivity.searchResult.summary_text}{" "}
             </p>{" "}
+            <p> Pros: {searchActivity.searchActivity.searchResult.pros} </p>{" "}
+            <p> Cons: {searchActivity.searchActivity.searchResult.cons} </p>{" "}
             <h3> Review Text: </h3>{" "}
             <ul>
               {" "}
