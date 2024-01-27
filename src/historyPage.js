@@ -1,6 +1,17 @@
 import React from "react";
 
 const HistoryPage = ({ historyData }) => {
+  // Fetch history data from the API
+  fetch("http://localhost:8000/searchActivity?page=1&limit=5", {
+    method: "GET",
+    credentials: "include", // This includes credentials (cookies) with the request
+  }) // Update with the correct endpoint
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      historyData = data;
+    })
+    .catch((error) => console.error("Error fetching history data:", error));
   return (
     <div>
       <h1> Search Activity History </h1>{" "}
